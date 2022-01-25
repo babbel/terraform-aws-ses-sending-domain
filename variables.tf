@@ -6,11 +6,11 @@ Domain name which shall be used as sender domain by SES.
 EOS
 }
 
-variable "route53_zone_id" {
-  type = string
+variable "route53_zone" {
+  type = object({ id = string })
 
   description = <<EOS
-ID of the Route53 hosted zone to which all DNS records shall be added.
+The Route53 hosted zone to which all DNS records shall be added.
 
 The domain name specified as `var.domain_name` must be within the Route53 hosted zone specified by this parameter.
 EOS

@@ -13,13 +13,17 @@ This includes the following components:
 ## Example
 
 ```tf
+resource "aws_route53_zone" "zone-example" {
+  name    = "zone.example.com"
+}
+
 module "ses-sending-domain-example" {
   source  = "babbel/ses-sending-domain/aws"
   version = "~> 1.0"
 
-  domain_name     = "example.com"
-  route53_zone_id = "A123456789"
-  sns_topic_name  = "example"
+  domain_name    = "example.com"
+  route53_zone   = aws_route53_zone.zone-example
+  sns_topic_name = "example"
 
   tags = {
     environment = "production"
