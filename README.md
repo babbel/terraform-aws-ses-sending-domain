@@ -13,8 +13,8 @@ This includes the following components:
 ## Example
 
 ```tf
-resource "aws_route53_zone" "zone-example" {
-  name    = "zone.example.com"
+resource "aws_route53_zone" "email-example" {
+  name    = "email.example.com"
 }
 
 module "ses-sending-domain-example" {
@@ -22,7 +22,7 @@ module "ses-sending-domain-example" {
   version = "~> 1.0"
 
   domain_name    = "example.com"
-  route53_zone   = aws_route53_zone.zone-example
+  route53_zone   = aws_route53_zone.email-example
   sns_topic_name = "example"
 
   tags = {
