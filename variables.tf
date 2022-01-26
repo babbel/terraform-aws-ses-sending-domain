@@ -7,7 +7,7 @@ EOS
 }
 
 variable "route53_zone" {
-  type = object({ id = string })
+  type = object({ zone_id = string })
 
   description = <<EOS
 The Route53 hosted zone to which all DNS records shall be added.
