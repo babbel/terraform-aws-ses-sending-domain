@@ -7,7 +7,7 @@ resource "aws_ses_domain_dkim" "this" {
 resource "aws_route53_record" "domainkey_cname" {
   count = 3
 
-  zone_id = var.route53_zone.id
+  zone_id = var.route53_zone.zone_id
   name    = "${aws_ses_domain_dkim.this.dkim_tokens[count.index]}._domainkey.${var.domain_name}."
   type    = "CNAME"
   ttl     = 3600
