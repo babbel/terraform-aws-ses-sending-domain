@@ -14,7 +14,7 @@ This includes the following components:
 
 ```tf
 resource "aws_route53_zone" "email-example" {
-  name    = "email.example.com"
+  name = "email.example.com"
 }
 
 module "ses-sending-domain-example" {
