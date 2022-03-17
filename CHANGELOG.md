@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.0.0
+## v1.2.0
 
 - [Bump hashicorp/aws dependency](https://github.com/babbel/terraform-aws-ses-sending-domain/pull/4)
 
