@@ -19,7 +19,7 @@ resource "aws_route53_zone" "email-example" {
 
 module "ses-sending-domain-example" {
   source  = "babbel/ses-sending-domain/aws"
-  version = "~> 1.2"
+  version = "~> 1.3"
 
   domain_name    = "example.com"
   route53_zone   = aws_route53_zone.email-example
