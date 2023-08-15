@@ -1,7 +1,5 @@
 resource "aws_ses_domain_dkim" "this" {
   domain = aws_ses_domain_identity.this.domain
-
-  depends_on = [aws_ses_domain_identity_verification.this]
 }
 
 resource "aws_route53_record" "domainkey_cname" {

@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.0
+
+- [Replace old TXT-based domain verification method with current DKIM-based domain verification method](https://github.com/babbel/terraform-aws-ses-sending-domain/pull/12)
+
 ## v1.2.0
 
 - [Bump hashicorp/aws dependency](https://github.com/babbel/terraform-aws-ses-sending-domain/pull/4)
