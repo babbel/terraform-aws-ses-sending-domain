@@ -1,3 +1,12 @@
+variable "default_tags" {
+  type    = map(string)
+  default = {}
+
+  description = <<EOS
+Map of tags assigned to all AWS resources created by this module.
+EOS
+}
+
 variable "domain_name" {
   type = string
 
@@ -20,15 +29,15 @@ variable "sns_topic_name" {
   type = string
 
   description = <<EOS
-Name of SNS topic
+Name of SNS topic.
 EOS
 }
 
-variable "tags" {
+variable "sns_topic_tags" {
   type    = map(string)
   default = {}
 
   description = <<EOS
-Tags which will be attached to all resources.
+Map of tags assigned to the SNS topic. These tags will be merged with `var.default_tags`.
 EOS
 }
