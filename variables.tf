@@ -7,7 +7,9 @@ EOS
 }
 
 variable "route53_zone" {
-  type = object({ zone_id = string })
+  type = object({
+    zone_id = string
+  })
 
   description = <<EOS
 The Route53 hosted zone to which all DNS records shall be added.
@@ -20,7 +22,7 @@ variable "sns_topic_name" {
   type = string
 
   description = <<EOS
-Name of SNS topic
+Name of SNS topic.
 EOS
 }
 
@@ -29,6 +31,6 @@ variable "tags" {
   default = {}
 
   description = <<EOS
-Tags which will be attached to all resources.
+Map of tags assigned to all AWS resources created by this module.
 EOS
 }
