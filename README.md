@@ -24,9 +24,5 @@ module "ses-sending-domain-example" {
   domain_name    = "example.com"
   route53_zone   = aws_route53_zone.email-example
   sns_topic_name = "example"
-
-  tags = {
-    environment = "production"
-  }
 }
 ```
