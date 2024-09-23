@@ -10,5 +10,9 @@ module "ses-sending-domain" {
     zone_id = "123"
   }
   sns_topic_name = "foo"
-  tags           = {}
+
+  default_tags = {
+    app = "example"
+    env = "test"
+  }
 }
