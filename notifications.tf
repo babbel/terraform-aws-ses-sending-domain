@@ -1,6 +1,6 @@
 resource "aws_sns_topic" "this" {
   name = var.sns_topic_name
-  tags = var.default_tags
+  tags = merge(var.default_tags, var.sns_topic_tags)
 }
 
 resource "aws_ses_identity_notification_topic" "bounce" {
