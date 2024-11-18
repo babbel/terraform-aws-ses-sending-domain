@@ -1,3 +1,12 @@
+variable "configure_spf" {
+  type    = bool
+  default = true
+
+  description = <<EOS
+Whether to configure SPF record for the domain.
+EOS
+}
+
 variable "default_tags" {
   type    = map(string)
   default = {}
